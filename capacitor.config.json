@@ -1,0 +1,14 @@
+{
+  "appId": "com.averagenattytrenuser.pocketangler",
+  "appName": "Pocket Angler",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#165a6e"
+  },
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "css",
+      "initialViewportFitValueHint": "cover"
+    }
+  }
+}
