@@ -1,0 +1,7 @@
+node_modules/
+android/
+package-lock.json
+assets/*.png
+signing/debug.keystore
+*.apk
+.DS_Store
