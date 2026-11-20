@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#1c4b4c" />
+  <title>Pocket Angler</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <!-- HUD -->
+  <div id="hud">
+    <div class="topbar">
+      <div class="pill coins"><span class="coin-ico"></span><span id="coins">0</span></div>
+      <div class="pill loc"><span id="locName">Willow Pond</span><span class="dot">•</span><span id="clockIco"></span><span id="clock">7:00</span></div>
+    </div>
+    <div id="gearline" class="gearline"></div>
+  </div>
+
+  <div id="hint" class="hint">Hold anywhere to cast</div>
+
+  <!-- Power meter while charging -->
+  <div id="power" class="power hidden">
+    <div class="power-track"><div id="powerFill" class="power-fill"></div></div>
+    <div class="power-labels"><span>Shallow</span><span>Mid</span><span>Deep</span></div>
+  </div>
+
+  <!-- Fight UI -->
+  <div id="fightui" class="fightui hidden">
+    <div class="fight-row">
+      <div class="lbl">Tension</div>
+      <div class="tension"><div id="tensionFill" class="tension-fill"></div><div class="tension-danger"></div></div>
+    </div>
+    <div class="fight-row">
+      <div class="lbl">Fish</div>
+      <div class="stam"><div id="stamFill" class="stam-fill"></div></div>
+      <div id="distTxt" class="dist">12.0 m</div>
+    </div>
+    <div id="fightHint" class="fight-hint">Hold to reel · let go when it pulls!</div>
+  </div>
+
+  <!-- Bottom menu -->
+  <nav id="menu" class="menu">
+    <button data-panel="shop"><span class="ico ico-shop"></span>Shop</button>
+    <button data-panel="map"><span class="ico ico-map"></span>Travel</button>
+    <button data-panel="journal"><span class="ico ico-book"></span>Journal</button>
+    <button data-panel="settings"><span class="ico ico-gear"></span>Settings</button>
+  </nav>
+
+  <div id="toast" class="toast"></div>
+
+  <!-- Catch card -->
+  <div id="card" class="overlay hidden">
+    <div class="catch-card">
+      <div id="cardBadges" class="badges"></div>
+      <canvas id="cardFish" width="520" height="260"></canvas>
+      <div id="cardRarity" class="rarity-tag">Common</div>
+      <h2 id="cardName">Minnow</h2>
+      <div class="card-stats">
+        <div><span class="k">Weight</span><span id="cardWeight" class="v">0.1 kg</span></div>
+        <div><span class="k">Value</span><span id="cardValue" class="v">6</span></div>
+      </div>
+      <p id="cardDesc" class="card-desc"></p>
+      <button id="cardBtn" class="btn primary big">Collect</button>
+    </div>
+  </div>
+
+  <!-- Panels -->
+  <div id="panel" class="overlay hidden">
+    <div class="sheet">
+      <div class="sheet-head">
+        <h2 id="panelTitle">Shop</h2>
+        <button id="panelClose" class="close" aria-label="Close">✕</button>
+      </div>
+      <div id="panelBody" class="sheet-body"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
