@@ -1,0 +1,22 @@
+{
+  "name": "pocket-angler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A cosy offline fishing game for Android, built with Capacitor.",
+  "scripts": {
+    "android:prepare": "bash scripts/prepare-android.sh",
+    "serve": "npx --yes http-server www -p 8080 -c-1"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.6.2",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.6.2",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/status-bar": "^8.0.4"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.2",
+    "@napi-rs/canvas": "^1.1.1"
+  }
+}
